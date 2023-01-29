@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "790155127350",
+    "project_id": "supervision-3f340",
+    "storage_bucket": "supervision-3f340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790155127350:android:2b8ee071513252e08dc697",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790155127350-ctmdaepogsnqp7b82e7bonft2o3a57m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiMr3ciMiHaBtNTcaUB5VFIpAmVKKXk8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790155127350-ctmdaepogsnqp7b82e7bonft2o3a57m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
