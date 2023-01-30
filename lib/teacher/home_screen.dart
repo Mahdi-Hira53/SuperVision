@@ -2,8 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:intl/intl.dart';
-import 'package:login/utility/constant_login.dart';
-import 'package:login/utility/reusable_button.dart';
 
 import '../schedule/schedule_page.dart';
 import 'color_all.dart';
@@ -48,7 +46,7 @@ class HomeScreen extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Column(
                 children: [
                   Row(
@@ -71,19 +69,18 @@ class HomeScreen extends StatelessWidget {
                         child: Container(
                           height: 52,
                           width: 52,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color.fromARGB(255, 2, 53, 62),
                             shape: BoxShape.circle,
                           ),
                           child: Expanded(
                             child: IconButton(
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.notifications,
                                 color: Colors.white,
                               ),
                               onPressed: () {
                                 // Here we write a code for notification
-                                print(3);
                               },
                             ),
                           ),
@@ -93,11 +90,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                   Column(
                     children: [
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Text(
-                        //DateFormat("'EEEE, yyyy-MM-dd HH:mm:ss").format(DateTime.now()),
                         DateFormat('EEEE, dd MMM yyyy').format(DateTime.now()),
 
-                        //DateFormat.yMMMd().format(DateTime.now()),
                         style: const TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: 15,
@@ -156,21 +154,20 @@ class HomeScreen extends StatelessWidget {
                       ),*/
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(50),
+                  const SizedBox(
+                    height: 80,
                   ),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      children: [
+                      children: const [
                         GroupHome(),
                         ScheduleHome(),
                       ],
                     ),
                   ),
-
                 ],
               ),
             ),
@@ -192,7 +189,7 @@ class BottomNavigationBar extends StatelessWidget {
       // for navigation
       color: Colors.white,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
         child: GNav(
           // for using google navigation
 
@@ -202,7 +199,7 @@ class BottomNavigationBar extends StatelessWidget {
           tabBackgroundColor: kTabBackgroundColor,
           gap: 8,
           // for creating gap between icon and text
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           tabs: [
             GButton(
               icon: Icons.logout_rounded,
@@ -217,9 +214,7 @@ class BottomNavigationBar extends StatelessWidget {
               icon: Icons.account_box,
               text: 'Profile',
               iconSize: 30,
-              onPressed: () {
-
-              },
+              onPressed: () {},
             ),
             GButton(
               icon: Icons.settings,

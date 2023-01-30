@@ -10,11 +10,12 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-        animationDuration: const Duration(milliseconds: 30),
-        splashTransition: SplashTransition.fadeTransition,
-        splashIconSize: 300,
-        splash: Logo(fontSize: 20, height: 200, width: 200),
-        nextScreen: MainPage());
+      animationDuration: const Duration(milliseconds: 30),
+      splashTransition: SplashTransition.fadeTransition,
+      splashIconSize: 300,
+      splash: Logo(fontSize: 20, height: 200, width: 200),
+      nextScreen: const MainPage(),
+    );
   }
 }
 //MainPage() instead of Home Page

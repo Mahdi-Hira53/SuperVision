@@ -9,7 +9,7 @@ import 'home_screen.dart';
 
 
 class HomePage extends StatelessWidget {
-
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: [
+      supportedLocales: const [
         Locale("en", "US"),
         Locale("bn", "BD"),
       ],
