@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -95,7 +96,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Text(
                         DateFormat('EEEE, dd MMM yyyy').format(DateTime.now()),
-
                         style: const TextStyle(
                           fontFamily: 'Cairo',
                           fontSize: 15,
@@ -162,7 +162,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisCount: 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      children: const [
+                      children: [
                         GroupHome(),
                         ScheduleHome(),
                       ],
@@ -230,12 +230,15 @@ class BottomNavigationBar extends StatelessWidget {
 }
 
 class GroupHome extends StatelessWidget {
-  const GroupHome({
+  GroupHome({
     Key? key,
   }) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(13),
       child: Container(
@@ -258,7 +261,7 @@ class GroupHome extends StatelessWidget {
               // Here we call group button
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const GroupListBar()),
+                MaterialPageRoute(builder: (context) => GroupListBar()),
               );
               //print(1);
             },
